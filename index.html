@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maryam Hamda | Portfolio - Bioinformatics & Computational Biology</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .medical-gradient {
+            background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%);
+        }
+        .hero-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(219, 234, 254, 0.7);
+        }
+        /* Custom scrollbar for clinical sleekness */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="selection:bg-teal-100 selection:text-teal-900 antialiased">
+
+    <!-- TOP ANNOUNCEMENT BAR (Hackathon Winner) -->
+    <div class="bg-gradient-to-r from-blue-600 via-teal-600 to-emerald-600 text-white text-xs sm:text-sm font-medium px-4 py-2 text-center shadow-sm">
+        <span class="inline-flex items-center gap-1.5">
+            <i class="fa-solid fa-trophy text-amber-300 animate-bounce"></i>
+            <strong>HACKATHON WINNER & SCHOLAR:</strong> Engineering innovative, research-driven AI & machine learning software pipelines.
+        </span>
+    </div>
+
+    <!-- MAIN CLINICAL NAVIGATION -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center gap-2">
+                        <div class="w-9 h-9 rounded-lg bg-teal-600 flex items-center justify-center text-white font-bold text-lg shadow-sm shadow-teal-200">
+                            M
+                        </div>
+                        <div>
+                            <span class="font-bold text-slate-800 text-base tracking-tight block leading-none">Maryam Hamda</span>
+                            <span class="text-[10px] text-teal-600 uppercase font-bold tracking-widest mono block mt-0.5">Bioinformatics & AI</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Desktop Nav -->
+                <div class="hidden xl:flex items-center space-x-5 text-sm font-medium text-slate-600">
+                    <a href="#about" class="hover:text-teal-600 transition-colors">About</a>
+                    <a href="#skills" class="hover:text-teal-600 transition-colors">Skills</a>
+                    <a href="#lab-simulator" class="hover:text-teal-600 transition-colors">Lab Sandbox</a>
+                    <a href="#projects" class="hover:text-teal-600 transition-colors">Projects</a>
+                    <a href="#experience" class="hover:text-teal-600 transition-colors">Experience</a>
+                    <a href="#certifications" class="hover:text-teal-600 transition-colors">Certifications</a>
+                    <a href="#honors" class="hover:text-teal-600 transition-colors">Honors</a>
+                    <a href="Resyume.pdf.pdf" download="Maryam_Hamda_Resume.pdf" class="bg-teal-50 text-teal-700 px-3 py-1.5 rounded-md hover:bg-teal-100 transition-all font-mono text-xs flex items-center gap-1">
+                        <i class="fa-solid fa-file-pdf"></i> Resyume.pdf.pdf
+                    </a>
+                    <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-all shadow-sm shadow-blue-200">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center xl:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden xl:hidden bg-white border-b border-slate-200 px-4 py-3 space-y-2">
+            <a href="#about" class="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-50 font-medium">About</a>
+            <a href="#skills" class="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-50 font-medium">Skills</a>
+            <a href="#lab-simulator" class="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-50 font-medium">Lab Sandbox</a>
+            <a href="#projects" class="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-50 font-medium">Projects</a>
+            <a href="#experience" class="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-50 font-medium">Experience</a>
+            <a href="#certifications" class="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-50 font-medium">Certifications</a>
+            <a href="#honors" class="block px-3 py-2 rounded-md text-slate-700 hover:bg-slate-50 font-medium">Honors</a>
+            <a href="Resyume.pdf.pdf" download="Maryam_Hamda_Resume.pdf" class="block px-3 py-2 rounded-md text-teal-700 bg-teal-50 font-medium font-mono text-sm">Resyume.pdf.pdf</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-center bg-blue-600 text-white font-medium">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative medical-gradient overflow-hidden py-16 lg:py-24 border-b border-slate-200/60" id="about">
+        <!-- Interactive Node Canvas Background -->
+        <canvas id="network-canvas" class="absolute inset-0 pointer-events-auto opacity-40"></canvas>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Core Copy -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-dna text-blue-500 animate-spin" style="animation-duration: 4s;"></i> MS/PhD Aspirant | Bioinformatics & AI
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                        Bridging <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600">Biochemistry</span> & <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-600">Computational AI</span>
+                    </h1>
+                    
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0">
+                        Hi, I'm <strong class="text-slate-900">Maryam Hamda</strong>[cite: 1]. I formulate solutions at the intersection of machine learning, health data science, and molecular biochemistry[cite: 1]. From analyzing oncogenic <span class="mono text-teal-600 text-sm font-semibold">lncRNA</span> targets[cite: 1] to launching custom clinical visualizers[cite: 1], I design data-driven healthcare systems[cite: 1].
+                    </p>
+
+                    <!-- Fast Facts Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-left pt-2 max-w-2xl mx-auto lg:mx-0">
+                        <div class="p-3 bg-white/60 rounded-xl border border-slate-200/50">
+                            <span class="block text-2xl font-bold text-slate-800">3.84<span class="text-xs text-slate-400">/4.00</span></span>
+                            <span class="text-xs text-slate-500 font-medium">Biochem CGPA[cite: 1]</span>
+                        </div>
+                        <div class="p-3 bg-white/60 rounded-xl border border-slate-200/50">
+                            <span class="block text-2xl font-bold text-slate-800">16</span>
+                            <span class="text-xs text-slate-500 font-medium">Built Projects[cite: 1]</span>
+                        </div>
+                        <div class="p-3 bg-white/60 rounded-xl border border-slate-200/50">
+                            <span class="block text-2xl font-bold text-slate-800">16</span>
+                            <span class="text-xs text-slate-500 font-medium">Certifications[cite: 1]</span>
+                        </div>
+                        <div class="p-3 bg-white/60 rounded-xl border border-slate-200/50">
+                            <span class="block text-2xl font-bold text-slate-800 text-emerald-600">100+</span>
+                            <span class="text-xs text-slate-500 font-medium">Students Taught[cite: 1]</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Action Row -->
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-4">
+                        <a href="mailto:maryam.hamda2002@gmail.com" class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-teal-600 hover:bg-teal-700 text-white rounded-lg font-semibold shadow-sm shadow-teal-200 transition-all">
+                            <i class="fa-solid fa-envelope"></i> Email Inquiries[cite: 1]
+                        </a>
+                        <a href="Resyume.pdf.pdf" download="Maryam_Hamda_Resume.pdf" class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white hover:bg-slate-100 text-blue-700 border border-slate-300 rounded-lg font-mono text-sm font-bold transition-all shadow-sm">
+                            <i class="fa-solid fa-file-pdf text-red-500"></i> Resyume.pdf.pdf <i class="fa-solid fa-download text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Professional Summary Card Side -->
+                <div class="lg:col-span-5">
+                    <div class="hero-card rounded-2xl p-6 sm:p-8 shadow-xl shadow-blue-100/40 relative border border-white">
+                        <div class="absolute -top-3 -right-3 w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center border border-emerald-200 text-emerald-600 text-xl shadow-sm">
+                            <i class="fa-solid fa-microscope"></i>
+                        </div>
+                        <h3 class="text-xs uppercase font-bold tracking-wider text-slate-400 font-mono mb-2">Professional Brief</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Biochemistry Graduate[cite: 1] passionate about Bioinformatics, Computational Biology[cite: 1], and Artificial Intelligence[cite: 1]. Experienced in laboratory biochemistry pipelines[cite: 1], multi-omics data integration[cite: 1], and building responsive healthcare web apps using Python and machine learning algorithms[cite: 1].
+                        </p>
+                        <div class="mt-4 pt-4 border-t border-slate-200/60 space-y-2.5 text-xs text-slate-500">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-location-dot text-teal-600 w-4 text-center"></i>
+                                <span>Faisalabad, Pakistan[cite: 1]</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-phone text-teal-600 w-4 text-center"></i>
+                                <span>+92 311 7311354[cite: 1]</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-envelope text-teal-600 w-4 text-center"></i>
+                                <span>maryam.hamda2002@gmail.com[cite: 1]</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-5 pt-4 flex flex-wrap gap-2">
+                            <a href="https://linkedin.com" target="_blank" class="p-2 text-slate-500 hover:text-blue-700 bg-slate-50 hover:bg-blue-50 rounded-lg transition-all text-xs flex items-center gap-1 px-3 border border-slate-200 font-medium">
+                                <i class="fa-brands fa-linkedin"></i> LinkedIn[cite: 1]
+                            </a>
+                            <a href="https://medium.com" target="_blank" class="p-2 text-slate-500 hover:text-slate-800 bg-slate-50 hover:bg-slate-100 rounded-lg transition-all text-xs flex items-center gap-1 px-3 border border-slate-200 font-medium">
+                                <i class="fa-brands fa-medium"></i> Medium[cite: 1]
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- TECHNICAL SKILLS MATRIX -->
+    <section class="py-16 bg-white" id="skills">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs uppercase font-bold tracking-widest text-teal-600 font-mono mb-2">// Capability Index</h2>
+                <p class="text-3xl font-bold text-slate-900 tracking-tight">Core Competencies & Toolkit</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <div class="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center text-blue-700 text-lg font-bold mb-4">
+                        <i class="fa-solid fa-computer"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-3">Bioinformatics Platforms</h3>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-white rounded border border-slate-200 text-slate-700 mono">GEPIA2[cite: 1]</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-white rounded border border-slate-200 text-slate-700 mono">STRING[cite: 1]</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-white rounded border border-slate-200 text-slate-700 mono">Enrichr[cite: 1]</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-white rounded border border-slate-200 text-slate-700 mono">UniProt[cite: 1]</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-white rounded border border-slate-200 text-slate-700 mono">Cytoscape[cite: 1]</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-white rounded border border-slate-200 text-slate-700 mono">PyMOL[cite: 1]</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-white rounded border border-slate-200 text-slate-700">GeneExpression Analysis[cite: 1]</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-white rounded border border-slate-200 text-slate-700">Pathway Enrichment[cite: 1]</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <div class="w-10 h-10 rounded-xl bg-teal-100 flex items-center justify-center text-teal-700 text-lg font-bold mb-4">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-3">Biochemical Domain Expertise</h3>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-white rounded border border-slate-200 text-slate-700">Cancer Biology[cite: 1]</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-white rounded border border-slate-200 text-slate-700">Molecular Biochemistry[cite: 1]</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-white rounded border border-slate-200 text-slate-700">lncRNA Analysis[cite: 1]</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-white rounded border border-slate-200 text-slate-700">Protein-RNA Interaction[cite: 1]</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-white rounded border border-slate-200 text-slate-700">Enzyme Kinetics[cite: 1]</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-white rounded border border-slate-200 text-slate-700">Metabolic Pathways[cite: 1]</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 text-lg font-bold mb-4">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-800 mb-3">Programming & Assays</h3>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-teal-600 text-white rounded font-mono"><i class="fa-brands fa-python mr-1"></i> Python[cite: 1]</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-white rounded border border-slate-200 text-slate-700">Data Visualization[cite: 1]</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-white rounded border border-slate-200 text-slate-700">Machine Learning[cite: 1]</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-white rounded border border-slate-200 text-slate-700">Biochemical Assays[cite: 1]</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-white rounded border border-slate-200 text-slate-700">Nutritional Analyses[cite: 1]</span>
+                        <span class="px-2.5 py-1 text-xs font-semibold bg-white rounded border border-slate-200 text-slate-700">Research Writing[cite: 1]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAB SIMULATOR -->
+    <section class="py-16 bg-slate-50 border-y border-slate-200" id="lab-simulator">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl border border-slate-200 shadow-lg overflow-hidden">
+                <div class="bg-slate-900 px-6 py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-slate-800 gap-2">
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="text-xs font-mono text-slate-400 ml-2">oncology_expression_model.py</span>
+                    </div>
+                    <div class="bg-slate-800 text-[11px] font-mono text-teal-400 px-2.5 py-1 rounded border border-slate-700">
+                        <i class="fa-solid fa-flask mr-1"></i> Live Simulation Sandbox
+                    </div>
+                </div>
+                
+                <div class="p-6 grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <div class="lg:col-span-4 space-y-4">
+                        <div>
+                            <h3 class="text-base font-bold text-slate-800 flex items-center gap-2">
+                                <i class="fa-solid fa-sliders text-teal-600"></i> Expression Tuning
+                            </h3>
+                            <p class="text-xs text-slate-500 mt-1">Adjust target expression profiles to monitor pathway activation states dynamically.</p>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="flex justify-between items-center text-xs">
+                                <label class="font-mono text-slate-700 font-bold">LINC00511 Level[cite: 1]</label>
+                                <span id="val-linc" class="font-mono px-1.5 py-0.5 bg-slate-100 rounded text-slate-600 font-bold">1.50x</span>
+                            </div>
+                            <input type="range" id="input-linc" min="0.1" max="5.0" step="0.1" value="1.5" class="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-teal-600">
+                        </div>
+                        <div class="space-y-1">
+                            <div class="flex justify-between items-center text-xs">
+                                <label class="font-mono text-slate-700 font-bold">PI3K-AKT Signal Index[cite: 1]</label>
+                                <span id="val-pi3k" class="font-mono px-1.5 py-0.5 bg-slate-100 rounded text-slate-600 font-bold">1.00x</span>
+                            </div>
+                            <input type="range" id="input-pi3k" min="0.1" max="5.0" step="0.1" value="1.0" class="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-8 flex flex-col justify-between bg-slate-50 rounded-xl p-4 border border-slate-200">
+                        <div class="mb-4 flex justify-between items-center border-b border-slate-200 pb-2">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                                <i class="fa-solid fa-chart-simple text-blue-600"></i> Co-Expression Biomarker Projections
+                            </span>
+                            <span id="pathway-badge" class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-bold uppercase">
+                                Moderate Activation
+                            </span>
+                        </div>
+                        <div class="space-y-4 my-auto">
+                            <div>
+                                <div class="flex justify-between items-center text-xs font-mono mb-1">
+                                    <span class="text-slate-600">Oncogenic Proliferation Index</span>
+                                    <span id="bar-text-prolif" class="font-bold text-slate-800">45%</span>
+                                </div>
+                                <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
+                                    <div id="bar-fill-prolif" class="bg-gradient-to-r from-teal-500 to-emerald-500 h-full transition-all" style="width: 45%;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-center text-xs font-mono mb-1">
+                                    <span class="text-slate-600">Downstream Biomarker Interaction Confidence</span>
+                                    <span id="bar-text-conf" class="font-bold text-slate-800">72%</span>
+                                </div>
+                                <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
+                                    <div id="bar-fill-conf" class="bg-gradient-to-r from-blue-500 to-indigo-500 h-full transition-all" style="width: 72%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-2 border-t border-slate-200 font-mono text-[11px] text-slate-500 flex justify-between items-center">
+                            <span class="truncate"><i class="fa-solid fa-angle-right text-teal-600 animate-pulse"></i> <span id="console-log">Ready for structural optimization criteria.</span></span>
+                            <span class="text-[10px] text-slate-400">File: Resyume.pdf.pdf[cite: 1]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE EXTENSIVE PROJECTS REGISTRY -->
+    <section class="py-16 bg-white" id="projects">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
+                <div>
+                    <h2 class="text-xs uppercase font-bold tracking-widest text-teal-600 font-mono mb-2">// Software Repositories</h2>
+                    <p class="text-3xl font-bold text-slate-900 tracking-tight">Research & Development Projects</p>
+                </div>
+                <!-- Filters -->
+                <div class="flex flex-wrap gap-1.5 bg-slate-100 p-1 rounded-lg text-xs font-medium text-slate-600">
+                    <button onclick="filterProjects('all')" class="proj-filter-btn px-3 py-1.5 rounded-md bg-white text-slate-800 shadow-sm transition-all">All (16)</button>
+                    <button onclick="filterProjects('bioinformatics')" class="proj-filter-btn px-3 py-1.5 rounded-md hover:text-slate-900 transition-all">Bioinformatics / AI</button>
+                    <button onclick="filterProjects('medical')" class="proj-filter-btn px-3 py-1.5 rounded-md hover:text-slate-900 transition-all">Clinical Web Apps</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+                
+                <!-- Project 1 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between hover:border-teal-500 transition-all" data-cat="bioinformatics">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-blue-100 text-blue-800 rounded font-bold uppercase">Hackathon Winner[cite: 1]</span>
+                            <i class="fa-brands fa-github text-slate-400"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900">AI4Alzheimer – Early Detection Dashboard[cite: 1]</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Interactive dashboard exploring SNPs, genes, and biomarkers to predict Alzheimer’s disease risk patterns using machine learning models[cite: 1].</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                        <span>Python, Streamlit[cite: 1]</span>
+                        <span class="text-teal-600 font-semibold">Verified Artifact[cite: 1]</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between hover:border-teal-500 transition-all" data-cat="medical">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-200 text-slate-700 rounded font-bold uppercase">Clinical App[cite: 1]</span>
+                            <i class="fa-brands fa-github text-slate-400"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900">BluePrint Bio-Hub: Omni-Protocol Suite[cite: 1]</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">All-in-one terminal integrating genomics, kinetics, and automated solvers. Cuts calculation parameters by 40% with one-click reports[cite: 1].</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                        <span>Genomics, Kinetics[cite: 1]</span>
+                        <span class="text-teal-600">Lab Suite[cite: 1]</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between hover:border-teal-500 transition-all" data-cat="bioinformatics">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-teal-100 text-teal-800 rounded font-bold uppercase">DNA Visualizer[cite: 1]</span>
+                            <i class="fa-brands fa-github text-slate-400"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900">DNA-sequence Visualizer[cite: 1]</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Streamlit tool to analyze GC/AT content, codon usage, frequencies, hairpins, and sliding windows[cite: 1].</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                        <span>Pandas, Matplotlib[cite: 1]</span>
+                        <span>Open Source[cite: 1]</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between hover:border-teal-500 transition-all" data-cat="bioinformatics">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-blue-100 text-blue-800 rounded font-bold uppercase">Mutation Analytics[cite: 1]</span>
+                            <i class="fa-solid fa-file-word text-blue-500"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900">HBB DNA Mutation Effect Analysis[cite: 1]</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Analyzed DNA mutations in the HBB gene using ClinVar & NCBI datasets with dedicated processing and classification workflows[cite: 1].</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                        <span>ClinVar, Python[cite: 1]</span>
+                        <span class="text-slate-400">HBB_Workflow.docx[cite: 1]</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between hover:border-teal-500 transition-all" data-cat="bioinformatics">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-purple-100 text-purple-800 rounded font-bold uppercase">Causality[cite: 1]</span>
+                            <i class="fa-solid fa-flask"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900">Molecular Causality Engine[cite: 1]</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Analyzed amino acid mutations, predicted biochemical pathway impacts, symptoms, and visualized mapping algorithms[cite: 1].</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                        <span>Hackathon Project[cite: 1]</span>
+                        <span>Live Pipeline[cite: 1]</span>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between hover:border-teal-500 transition-all" data-cat="bioinformatics">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded font-bold uppercase">Proteomics[cite: 1]</span>
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900">ProtParam-Protein-Analysis[cite: 1]</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Protein sequence analysis utilizing ExPASy ProtParam to evaluate weight, pI, and stability differences in mutated models[cite: 1].</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                        <span>ExPASy ProtParam[cite: 1]</span>
+                        <span class="text-slate-400">ProtParam_Project.docx[cite: 1]</span>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between hover:border-teal-500 transition-all" data-cat="medical">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-amber-100 text-amber-800 rounded font-bold uppercase">Cardio AI[cite: 1]</span>
+                            <i class="fa-solid fa-heart-pulse text-red-500"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900">HeartLens Dashboard[cite: 1]</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Web-based system analyzing lifestyle metadata and clinical parameters to yield clear, color-coded risk metrics[cite: 1].</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                        <span>Streamlit Dashboard[cite: 1]</span>
+                        <span class="text-emerald-600 font-semibold">Active[cite: 1]</span>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between hover:border-teal-500 transition-all" data-cat="medical">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-200 text-slate-700 rounded font-bold uppercase">Vision AI[cite: 1]</span>
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900">Smart Medicine Vision Assistant[cite: 1]</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">AI tool that identifies pharmaceutical variants from damaged strips and returns usage guidance with confidence scores[cite: 1].</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                        <span>Computer Vision[cite: 1]</span>
+                        <span>Clinical Assistant[cite: 1]</span>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between hover:border-teal-500 transition-all" data-cat="medical">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-200 text-slate-700 rounded font-bold uppercase">Lab Tool[cite: 1]</span>
+                            <i class="fa-solid fa-laptop text-slate-400"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900">Virtual-lab-assistant[cite: 1]</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">A utility built to decrease calculation times and maximize precision rates for biochemistry research teams[cite: 1].</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                        <span>Python Solvers[cite: 1]</span>
+                        <span>Lab Optimizer[cite: 1]</span>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between hover:border-teal-500 transition-all" data-cat="medical">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-blue-50 text-blue-800 rounded font-bold uppercase">Flask Architecture[cite: 1]</span>
+                            <i class="fa-solid fa-weight-scale"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900">BMI Calculator Web App[cite: 1]</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Multi-page application outlining structural BMI logs and step-by-step index guidelines with a polished interface[cite: 1].</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                        <span>Flask, Frontend[cite: 1]</span>
+                        <span>Clinical Profile[cite: 1]</span>
+                    </div>
+                </div>
+
+                <!-- Project 11 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between hover:border-teal-500 transition-all" data-cat="medical">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-orange-50 text-orange-800 rounded font-bold uppercase">Sustainability[cite: 1]</span>
+                            <i class="fa-solid fa-trophy text-amber-500"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900">EcoScore Pakistan[cite: 1]</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Hackathon-winning interactive model mapping regional environmental parameters and carbon indexes[cite: 1].</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                        <span>Calculator Core[cite: 1]</span>
+                        <span>Award Winner[cite: 1]</span>
+                    </div>
+                </div>
+
+                <!-- Project 12 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between hover:border-teal-500 transition-all" data-cat="medical">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-red-50 text-red-800 rounded font-bold uppercase">Pharmaco[cite: 1]</span>
+                            <i class="fa-solid fa-pills"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900">Medicine Pathways Info App[cite: 1]</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Visualizes drug absorption journey parameters from ingestion coordinates down to cellular excretion lines[cite: 1].</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                        <span>MedicineApp Core[cite: 1]</span>
+                        <span>Education Suite[cite: 1]</span>
+                    </div>
+                </div>
+
+                <!-- Project 13 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between hover:border-teal-500 transition-all" data-cat="medical">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-200 text-slate-700 rounded font-bold uppercase">Genetics Tool[cite: 1]</span>
+                            <i class="fa-solid fa-droplet text-red-500"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900">Blood Group Prediction App[cite: 1]</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Educational tool mapping allele inputs to output statistical probabilities of child blood configurations[cite: 1].</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                        <span>Mendelian Logic[cite: 1]</span>
+                        <span>Predictor App[cite: 1]</span>
+                    </div>
+                </div>
+
+                <!-- Project 14 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between hover:border-teal-500 transition-all" data-cat="medical">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-200 text-slate-700 rounded font-bold uppercase">Adherence[cite: 1]</span>
+                            <i class="fa-solid fa-bell"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900">MediAlert Application[cite: 1]</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Hackathon module engineered to support strict therapeutic compliance windows and medication timelines[cite: 1].</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                        <span>Compliance Tracker[cite: 1]</span>
+                        <span>Hackathon Core[cite: 1]</span>
+                    </div>
+                </div>
+
+                <!-- Project 15 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between hover:border-teal-500 transition-all" data-cat="medical">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-200 text-slate-700 rounded font-bold uppercase">Metabolic[cite: 1]</span>
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900">PathoMetabo Portal[cite: 1]</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Hackathon design focused on tracking metabolic system faults and abnormal pathway networks[cite: 1].</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                        <span>Network Discovery[cite: 1]</span>
+                        <span>Hackathon Project[cite: 1]</span>
+                    </div>
+                </div>
+
+                <!-- Project 16 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between hover:border-teal-500 transition-all" data-cat="medical">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-200 text-slate-700 rounded font-bold uppercase">EdTech[cite: 1]</span>
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-900">LearnSphere Language Modules[cite: 1]</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Student-friendly application hosting structured grammar, quiz criteria, and assessment logs[cite: 1].</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                        <span>Interactive App[cite: 1]</span>
+                        <span>WebMind Hackathon[cite: 1]</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE & CHRONOLOGY -->
+    <section class="py-16 bg-slate-50 border-t border-slate-200" id="experience">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs uppercase font-bold tracking-widest text-teal-600 font-mono mb-2">// Timeline</h2>
+                <p class="text-3xl font-bold text-slate-900 tracking-tight">Professional History</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Biochemistry Research Intern[cite: 1]</h3>
+                            <span class="text-sm font-medium text-slate-500">Ayub Agricultural Research Institute (AARI), Post Harvest Research Centre[cite: 1]</span>
+                        </div>
+                        <span class="text-xs font-mono font-bold bg-teal-50 text-teal-700 px-3 py-1 rounded border border-teal-200 mt-1 sm:mt-0">June 2025 — August 2026[cite: 1]</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Conducted laboratory biochemical assays isolating protein indices, sugar concentrations, moisture content, and ash profiles using standard analytical techniques[cite: 1]. Integrated wet-lab data with downstream computational biology methods[cite: 1].
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Independent Bioinformatics Researcher[cite: 1]</h3>
+                            <span class="text-sm font-medium text-slate-500">Computational Biology Focus[cite: 1]</span>
+                        </div>
+                        <span class="text-xs font-mono font-bold bg-teal-50 text-teal-700 px-3 py-1 rounded border border-teal-200 mt-1 sm:mt-0">2022 — Present[cite: 1]</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Evaluated regulatory network pathways of cancer-associated transcripts (specifically <strong class="text-slate-800">LINC00511</strong>)[cite: 1]. Map biomarker candidate structures across structural databases using Cytoscape and PyMOL[cite: 1].
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GLOBAL CERTIFICATIONS VAULT -->
+    <section class="py-16 bg-white" id="certifications">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs uppercase font-bold tracking-widest text-teal-600 font-mono mb-2">// Verified Credentials</h2>
+                <p class="text-3xl font-bold text-slate-900 tracking-tight">Academic & Industry Certifications</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Cert 1 -->
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-sm font-bold text-slate-900">MCB63X: Principles of Biochemistry[cite: 1]</h4>
+                            <span class="text-[10px] font-mono bg-blue-100 text-blue-800 px-2 py-0.5 rounded uppercase font-bold whitespace-nowrap">HarvardX[cite: 1]</span>
+                        </div>
+                        <p class="text-xs text-slate-500">Completed core validation sets covering metabolism, cellular biochemistry, and molecular biology mechanics[cite: 1]. Issued July 2026[cite: 1].</p>
+                    </div>
+                    <span class="text-[10px] font-mono text-slate-400 mt-3 block">Skills: Biochemistry, Enzymes[cite: 1]</span>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-sm font-bold text-slate-900">PCR-based Disease Diagnosis[cite: 1]</h4>
+                            <span class="text-[10px] font-mono bg-teal-100 text-teal-800 px-2 py-0.5 rounded uppercase font-bold whitespace-nowrap">UAF[cite: 1]</span>
+                        </div>
+                        <p class="text-xs text-slate-500">Gained insight into molecular diagnostic workflows used for accurate pathogen and mutation detection[cite: 1]. Issued April 2026[cite: 1].</p>
+                    </div>
+                    <span class="text-[10px] font-mono text-slate-400 mt-3 block">Skills: Molecular Diagnostics[cite: 1]</span>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-sm font-bold text-slate-900">Hack4Health Certification[cite: 1]</h4>
+                            <span class="text-[10px] font-mono bg-purple-100 text-purple-800 px-2 py-0.5 rounded uppercase font-bold whitespace-nowrap">Devpost[cite: 1]</span>
+                        </div>
+                        <p class="text-xs text-slate-500">AI4Alzheimer platform entry merging ML workflows with clinical biomarker assessment logs[cite: 1]. Issued February 2026[cite: 1].</p>
+                    </div>
+                    <span class="text-[10px] font-mono text-slate-400 mt-3 block">File: Maryam Hamda_AI4Alzheimers_Certificate.pdf[cite: 1]</span>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-sm font-bold text-slate-900">Data Science & Analytics[cite: 1]</h4>
+                            <span class="text-[10px] font-mono bg-slate-200 text-slate-700 px-2 py-0.5 rounded uppercase font-bold whitespace-nowrap">HP LIFE[cite: 1]</span>
+                        </div>
+                        <p class="text-xs text-slate-500">Online training covering data structures, exploratory chart analytics, and predictive data logic[cite: 1]. Issued March 2026[cite: 1].</p>
+                    </div>
+                    <span class="text-[10px] font-mono text-slate-400 mt-3 block">Skills: Data Visualization[cite: 1]</span>
+                </div>
+
+                <!-- Cert 5 -->
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-sm font-bold text-slate-900">AI for Business Professionals[cite: 1]</h4>
+                            <span class="text-[10px] font-mono bg-slate-200 text-slate-700 px-2 py-0.5 rounded uppercase font-bold whitespace-nowrap">HP LIFE[cite: 1]</span>
+                        </div>
+                        <p class="text-xs text-slate-500">Applying Artificial Intelligence constructs for data-driven modeling inside modern clinical contexts[cite: 1]. Issued February 2026[cite: 1].</p>
+                    </div>
+                    <span class="text-[10px] font-mono text-slate-400 mt-3 block">File: AI for Business Professionals.pdf[cite: 1]</span>
+                </div>
+
+                <!-- Cert 6 -->
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-sm font-bold text-slate-900">AARI Internship Certificate[cite: 1]</h4>
+                            <span class="text-[10px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded uppercase font-bold whitespace-nowrap">AARI[cite: 1]</span>
+                        </div>
+                        <p class="text-xs text-slate-500">Practical testing validating protein, moisture, ash, and structural element counts[cite: 1]. Issued February 2026[cite: 1].</p>
+                    </div>
+                    <span class="text-[10px] font-mono text-slate-400 mt-3 block">File: AARI certificate.jpeg[cite: 1]</span>
+                </div>
+
+                <!-- Cert 7 -->
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-sm font-bold text-slate-900">Research Publication Training[cite: 1]</h4>
+                            <span class="text-[10px] font-mono bg-blue-100 text-blue-800 px-2 py-0.5 rounded uppercase font-bold whitespace-nowrap">IEEE[cite: 1]</span>
+                        </div>
+                        <p class="text-xs text-slate-500">Preparing and structuring engineering research papers for publication from an IEEE perspective[cite: 1]. Issued November 2025[cite: 1].</p>
+                    </div>
+                    <span class="text-[10px] font-mono text-slate-400 mt-3 block">File: IEEE certificate.pdf[cite: 1]</span>
+                </div>
+
+                <!-- Cert 8 -->
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-sm font-bold text-slate-900">Inclusive Publishing Pathway[cite: 1]</h4>
+                            <span class="text-[10px] font-mono bg-slate-200 text-slate-700 px-2 py-0.5 rounded uppercase font-bold whitespace-nowrap">Wiley[cite: 1]</span>
+                        </div>
+                        <p class="text-xs text-slate-500">Webinar validating cross-border partnerships and open tools for accessible scientific output[cite: 1]. Issued November 2025[cite: 1].</p>
+                    </div>
+                    <span class="text-[10px] font-mono text-slate-400 mt-3 block">File: certificate.pdf[cite: 1]</span>
+                </div>
+
+                <!-- Cert 9 -->
+                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-start">
+                            <h4 class="text-sm font-bold text-slate-900">Exploring AI in Bioinformatics[cite: 1]</h4>
+                            <span class="text-[10px] font-mono bg-indigo-100 text-indigo-800 px-2 py-0.5 rounded uppercase font-bold whitespace-nowrap">Genomac USA[cite: 1]</span>
+                        </div>
+                        <p class="text-xs text-slate-500">Explored machine learning frameworks mapped to transcriptomic sequences and target analysis[cite: 1]. Issued July 2025[cite: 1].</p>
+                    </div>
+                    <span class="text-[10px] font-mono text-slate-400 mt-3 block">Bioinformatics 201 Track Core[cite: 1]</span>
+                </div>
+            </div>
+
+            <!-- Additional Credentials Accordion Toggle -->
+            <div class="mt-4 text-center">
+                <button onclick="toggleCertAccordion()" id="cert-toggle-btn" class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-teal-600 hover:text-teal-700">
+                    <span>[+] View Remaining Institutional Certifications (7 More)</span>
+                </button>
+            </div>
+
+            <div id="cert-accordion" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 pt-6 border-t border-slate-100">
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-xs">
+                    <span class="font-bold block text-slate-800">Seminar on CRISPR Designing[cite: 1]</span>
+                    <span class="text-slate-500 block">University of Agriculture Faisalabad — Dec 2024[cite: 1]</span>
+                    <span class="text-[10px] text-slate-400 block mt-1">File: IMG-20250303-WA0026.jpg[cite: 1]</span>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-xs">
+                    <span class="font-bold block text-slate-800">Primer & CRISPR Workshop[cite: 1]</span>
+                    <span class="text-slate-500 block">Hands-on molecular biology training — Feb 2025[cite: 1]</span>
+                    <span class="text-[10px] text-slate-400 block mt-1">File: 20250624_133511.jpg[cite: 1]</span>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-xs">
+                    <span class="font-bold block text-slate-800">IT for Business Success[cite: 1]</span>
+                    <span class="text-slate-500 block">HP LIFE operations validation — Mar 2026[cite: 1]</span>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-xs">
+                    <span class="font-bold block text-slate-800">Success Mindset Certification[cite: 1]</span>
+                    <span class="text-slate-500 block">HP LIFE strategic framework — Feb 2026[cite: 1]</span>
+                    <span class="text-[10px] text-slate-400 block mt-1">File: Success Mindset.pdf[cite: 1]</span>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-xs">
+                    <span class="font-bold block text-slate-800">Bioinformatics 201 Extended[cite: 1]</span>
+                    <span class="text-slate-500 block">Genomac Institute Inc USA — Oct 2024[cite: 1]</span>
+                    <span class="text-[10px] text-slate-400 block mt-1">File: 20250624_133524.jpg[cite: 1]</span>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-xs">
+                    <span class="font-bold block text-slate-800">Test of Grammar Skills[cite: 1]</span>
+                    <span class="text-slate-500 block">ProProfs accuracy verification — Jun 2023[cite: 1]</span>
+                    <span class="text-[10px] text-slate-400 block mt-1">File: IMG-20230601-WA0077.jpg[cite: 1]</span>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-xs">
+                    <span class="font-bold block text-slate-800">Financial Literacy Program[cite: 1]</span>
+                    <span class="text-slate-500 block">National Literacy Program for Youth — Sep 2022[cite: 1]</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HONORS & ACADEMIC SCHOLARSHIPS -->
+    <section class="py-16 bg-slate-50 border-t border-slate-200" id="honors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs uppercase font-bold tracking-widest text-teal-600 font-mono mb-2">// Excellence Benchmarks</h2>
+                <p class="text-3xl font-bold text-slate-900 tracking-tight">Institutional Honors & Awards</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Award 1 -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex gap-4">
+                    <div class="w-12 h-12 rounded-lg bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600 text-xl flex-shrink-0">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <div class="space-y-1.5">
+                        <span class="text-[10px] font-mono text-slate-400 block font-bold">JULY 2024[cite: 1]</span>
+                        <h3 class="text-base font-bold text-slate-900">University Merit Scholarship[cite: 1]</h3>
+                        <span class="text-xs font-medium text-slate-500 block">Issued by University of Agriculture Faisalabad[cite: 1]</span>
+                        <p class="text-xs text-slate-600 leading-relaxed pt-1">
+                            Selected after the second semester based on high academic standing[cite: 1]. **Ranked 2nd in cumulative CGPA** across a competitive cohort of approximately 100 students[cite: 1].
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Award 2 -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex gap-4">
+                    <div class="w-12 h-12 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 text-xl flex-shrink-0">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div class="space-y-1.5">
+                        <span class="text-[10px] font-mono text-slate-400 block font-bold">DECEMBER 2023[cite: 1]</span>
+                        <h3 class="text-base font-bold text-slate-900">Prime Minister's Youth Laptop Scheme[cite: 1]</h3>
+                        <span class="text-xs font-medium text-slate-500 block">Issued by Prime Minister's Youth Programme[cite: 1]</span>
+                        <p class="text-xs text-slate-600 leading-relaxed pt-1">
+                            Awarded for academic excellence[cite: 1]. Secured the **2nd rank in class matching cumulative CGPA parameters**, placing in the Top 10 students selected from the Department of Biochemistry[cite: 1].
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT REGISTRY -->
+    <section class="py-16 bg-white border-t border-slate-200" id="contact">
+        <div class="max-w-3xl mx-auto bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-md mx-4 sm:mx-auto">
+            <div class="text-center space-y-2 mb-6">
+                <h2 class="text-2xl font-bold text-slate-900">Initiate Academic Collaboration</h2>
+                <p class="text-slate-500 text-xs">Fill out the clinical contact registry to coordinate research data pipelines.</p>
+            </div>
+
+            <div id="form-feedback" class="hidden p-4 rounded-xl text-sm font-medium text-center mb-4"></div>
+
+            <form id="portfolio-contact-form" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="space-y-1">
+                        <label class="text-xs font-bold text-slate-700 uppercase tracking-wider">Full Name *</label>
+                        <input type="text" required class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 bg-white text-sm">
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-xs font-bold text-slate-700 uppercase tracking-wider">Email Address *</label>
+                        <input type="email" required class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 bg-white text-sm">
+                    </div>
+                </div>
+                <div class="space-y-1">
+                    <label class="text-xs font-bold text-slate-700 uppercase tracking-wider">Inquiry Context</label>
+                    <select class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 bg-white text-sm">
+                        <option>MS / PhD Research Opportunities</option>
+                        <option>Bioinformatics Collaboration</option>
+                        <option>Data Science Pipeline Development</option>
+                    </select>
+                </div>
+                <div class="space-y-1">
+                    <label class="text-xs font-bold text-slate-700 uppercase tracking-wider">Message Body Description *</label>
+                    <textarea rows="4" required class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-teal-500 bg-white text-sm" placeholder="Provide full research details here..."></textarea>
+                </div>
+                <button type="submit" class="w-full py-2.5 bg-teal-600 hover:bg-teal-700 text-white rounded-lg font-semibold transition-all text-sm">
+                    Dispatch Correspondence
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-10 border-t border-slate-800 font-mono">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="text-center sm:text-left">
+                <span class="text-sm font-bold text-white block">Maryam Hamda Portfolio Dashboard</span>
+                <span>Faisalabad, Punjab, Pakistan — Multi-Omics Research Matrix[cite: 1]</span>
+            </div>
+            <div class="text-center sm:text-right">
+                <span>Verified Baseline Source: <strong class="text-slate-200">Resyume.pdf.pdf</strong>[cite: 1]</span>
+                <span class="block text-[10px] text-slate-500 mt-1">Built with HTML5 & Tailwind CSS.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVELOGIC SCRIPTS -->
+    <script>
+        // --- MOBILE NAV TOGGLE ---
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+        // --- ACCORDION TOGGLE ---
+        function toggleCertAccordion() {
+            const acc = document.getElementById('cert-accordion');
+            const toggleBtn = document.getElementById('cert-toggle-btn');
+            acc.classList.toggle('hidden');
+            if(acc.classList.contains('hidden')) {
+                toggleBtn.innerHTML = "<span>[+] View Remaining Institutional Certifications (7 More)</span>";
+            } else {
+                toggleBtn.innerHTML = "<span>[-] Collapse Extra Certifications</span>";
+            }
+        }
+
+        // --- FILTER PROJECT MATRIX ---
+        function filterProjects(cat) {
+            const grid = document.getElementById('projects-grid');
+            const items = grid.querySelectorAll('[data-cat]');
+            const filterBtns = document.querySelectorAll('.proj-filter-btn');
+            
+            filterBtns.forEach(b => b.classList.remove('bg-white', 'text-slate-800', 'shadow-sm'));
+            event.currentTarget.classList.add('bg-white', 'text-slate-800', 'shadow-sm');
+
+            items.forEach(item => {
+                if(cat === 'all' || item.getAttribute('data-cat') === cat) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // --- INTERACTIVE BACKGROUND NODE CANVAS ---
+        const canvas = document.getElementById('network-canvas');
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = canvas.offsetWidth;
+        let height = canvas.height = canvas.offsetHeight;
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = canvas.offsetWidth;
+            height = canvas.height = canvas.offsetHeight;
+        });
+
+        const nodes = [];
+        for (let i = 0; i < 35; i++) {
+            nodes.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                vx: (Math.random() - 0.5) * 0.5,
+                vy: (Math.random() - 0.5) * 0.5,
+                radius: Math.random() * 2 + 1
+            });
+        }
+
+        function animateCanvas() {
+            ctx.clearRect(0, 0, width, height);
+            for (let i = 0; i < nodes.length; i++) {
+                for (let j = i + 1; j < nodes.length; j++) {
+                    const dist = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
+                    if (dist < 110) {
+                        ctx.beginPath();
+                        ctx.moveTo(nodes[i].x, nodes[i].y);
+                        ctx.lineTo(nodes[j].x, nodes[j].y);
+                        ctx.strokeStyle = `rgba(13, 148, 136, ${0.12 * (1 - dist/110)})`;
+                        ctx.stroke();
+                    }
+                }
+            }
+            nodes.forEach(n => {
+                n.x += n.vx; n.y += n.vy;
+                if (n.x < 0 || n.x > width) n.vx *= -1;
+                if (n.y < 0 || n.y > height) n.vy *= -1;
+                ctx.beginPath();
+                ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
+                ctx.fillStyle = '#0d9488';
+                ctx.fill();
+            });
+            requestAnimationFrame(animateCanvas);
+        }
+        animateCanvas();
+
+        // --- EXPRESSION SIMULATOR MATRIX ENGINE ---
+        const inputLinc = document.getElementById('input-linc');
+        const inputPi3k = document.getElementById('input-pi3k');
+        const valLinc = document.getElementById('val-linc');
+        const valPi3k = document.getElementById('val-pi3k');
+        const fillProlif = document.getElementById('bar-fill-prolif');
+        const fillConf = document.getElementById('bar-fill-conf');
+        const textProlif = document.getElementById('bar-text-prolif');
+        const textConf = document.getElementById('bar-text-conf');
+        const badge = document.getElementById('pathway-badge');
+        const consoleLog = document.getElementById('console-log');
+
+        function recalc() {
+            const l = parseFloat(inputLinc.value);
+            const p = parseFloat(inputPi3k.value);
+            valLinc.innerText = l.toFixed(2) + 'x';
+            valPi3k.innerText = p.toFixed(2) + 'x';
+
+            let prolif = Math.min(Math.round((l * 22) + (p * 15)), 100);
+            let conf = Math.min(Math.round(60 + (l * 5) + (p * 3)), 100);
+
+            fillProlif.style.width = prolif + '%';
+            fillConf.style.width = conf + '%';
+            textProlif.innerText = prolif + '%';
+            textConf.innerText = conf + '%';
+
+            if (prolif > 70) {
+                badge.innerText = "High Activation State";
+                badge.className = "text-[10px] font-mono px-2 py-0.5 rounded-full bg-red-100 text-red-800 font-bold uppercase";
+                consoleLog.innerText = `Warning: Elevated expressions simulate high replication rates.`;
+            } else {
+                badge.innerText = "Moderate Homeostasis State";
+                badge.className = "text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-bold uppercase";
+                consoleLog.innerText = `Log: Analytical metrics steady across target tissue profiles.`;
+            }
+        }
+        inputLinc.addEventListener('input', recalc);
+        inputPi3k.addEventListener('input', recalc);
+
+        // --- CONTACT REGISTRY TRANSITION FORM ---
+        document.getElementById('portfolio-contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const f = document.getElementById('form-feedback');
+            f.classList.remove('hidden');
+            f.className = "p-4 rounded-xl text-sm font-medium text-center bg-emerald-50 text-emerald-800 border border-emerald-200 mb-4";
+            f.innerText = "Transmission Successful! Maryam Hamda will review your request shortly.";
+            this.reset();
+        });
+    </script>
+</body>
+</html>
